@@ -1,14 +1,44 @@
 #include "stdio.h"
 #include "math.h"
 
-//1到100的所有整数中出现多少个数字9
+//求数组中最大值
+int main()
+{
+	int arr[10]={0};
+	printf("请输入10个数：>");
+	int max = arr[0];
+	int i = 0;
+	for(i=0;i<10;i++)
+	{	
+	scanf("%d",&arr[i]);
+	}
+	for(i=0;i<10;i++)
+	{
+		if(max < arr[i])
+		{
+			max = arr[i];
+		}
+	}
+	printf("max = %d",max);
+	return 0;
+}
+
+
+/*//整数中出现多少个数字9
 int main()
 {
 	int i = 0;
 	int count = 0;
-	for(i=1;i<=100;i++)
-	{
+	for(i=1;i<=900;i++)//可自行调节i范围
 		switch(i%10)
+		{
+			case 9:
+				printf("%d ",i);//个位
+				count++;
+				break;
+			default:break;
+		}
+		switch(i/10)//十位
 		{
 			case 9:
 				printf("%d ",i);
@@ -16,10 +46,26 @@ int main()
 				break;
 			default:break;
 		}
+		switch(i/100)//百位
+		{
+			case 9:
+				printf("%d ",i);
+				count++;
+				break;
+			default:break;
+		}
+		/*//推荐这个
+		if(i%10 == 9)//个位为9
+			count++;
+		if(i/10 == 9)//十位为9
+			count++;
+		if(i/100 == 9)//百位为9
+			count++;
+		*/
 	}
 	printf("\ncount=%d\n",count);
 	return 0;
-}
+}*/
 
 
 
