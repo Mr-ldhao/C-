@@ -1,9 +1,23 @@
 #include "stdio.h"
 #include "math.h"
 
+//1到100的所有整数中出现多少个数字9
 int main()
 {
-	
+	int i = 0;
+	int count = 0;
+	for(i=1;i<=100;i++)
+	{
+		switch(i%10)
+		{
+			case 9:
+				printf("%d ",i);
+				count++;
+				break;
+			default:break;
+		}
+	}
+	printf("\ncount=%d\n",count);
 	return 0;
 }
 
