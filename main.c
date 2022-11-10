@@ -40,7 +40,7 @@ int main()
 //}
 
 
-
+//找出1000年到2000年的闰年
 /*int main()
 {
 	int i;int count = 0;
@@ -49,7 +49,6 @@ int main()
 		//到断是否为闰年
 		//能被4整除并且不能被100整除是闰年
 		//能被400整除是闰年
-		
 		if(i%4 == 0 && i%100 != 0)
 		{
 			printf("%d ",i);
@@ -59,8 +58,7 @@ int main()
 		{
 			printf("%d ",i);
 			count++;
-		}
-		 
+		} 
 	}
 	printf("\n%d\n",count);
 	return 0;
