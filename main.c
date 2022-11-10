@@ -1,6 +1,21 @@
 #include "stdio.h"
 #include "math.h"
 
+//打印乘法表
+int main()
+{
+	int i = 0,j = 0;
+	for(i=1;i<10;i++)//打印行数——9行
+	{
+		for(j=1;j<=i;j++)
+		{
+		printf("%d*%d=%2d ",i,j,i*j);	//%2d是右对齐，%-2d是左对齐,如下：
+		}				// 2			2
+		printf("\n");			//10			10
+	}
+	return 0;
+}
+/*
 //求数组中最大值
 int main()
 {
@@ -21,7 +36,7 @@ int main()
 	}
 	printf("max = %d",max);
 	return 0;
-}
+}*/
 
 
 /*//整数中出现多少个数字9
