@@ -1,5 +1,6 @@
 #include "stdio.h"
 #include "stdlib.h"
+#include “time.h”
 //猜数字游戏
 //产生随机数
 //判断数字
