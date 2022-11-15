@@ -1,0 +1,47 @@
+#include "stdio.h"
+#include "stdlib.h"
+#include "string.h"
+
+int main()
+{
+	//shutdown -s -t   设置时间关机，如 shutdown -s -t 60 设置电脑60s后关机
+	//也有电脑是shutdown /s /t，系统版本问题
+	//system()——执行系统命令
+	/*
+	可以在电脑的命令窗口输入,尝试一下关机
+	1.命令窗口用 Win + r 打开，
+	2.然后输入cmd进入命令窗口；
+	3.再输入shutdown -s -t 60执行
+	4. 60秒内再次输入shutdown -a取消关机*/
+	char input[20] = {0};
+	system("shutdown -s -t 60");//调用stdlib.h
+	//方法1
+/*	
+again:
+	printf("请注意，电脑在一分钟内关机，若输入：我错了，就取消关机\n请输入：");
+	scanf("%s",&input);
+	if(strcmp(input, "我错了") == 0)//专门比较两个字符串的函数——strcmp（）,调用string.h
+	{
+		system("shutdown -a");
+	}
+	else
+	{
+		goto again;
+	}
+	*/
+	//方法二
+	while(1)
+	{
+		printf("请注意，电脑在一分钟内关机，若输入：我错了，就取消关机\n请输入：");
+		scanf("%s",&input);
+		if(strcmp(input, "我错了") == 0)//专门比较两个字符串的函数——strcmp（）,调用string.h
+		{
+		system("shutdown -a");
+		break;
+		}
+	}
+	return 0;
+}
+//一个非常有趣的玩法：尝试把运行后的exe文件，添加到电脑的本地服务（可在设置的搜索框中搜索服务）
+//至于怎么添加，上网直接搜索添加本地服务
+//然后在属性中设置为自动启动，然后，嘿嘿嘿！!!
