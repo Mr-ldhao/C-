@@ -44,9 +44,8 @@
 //void swap(int* x,int* y)//通过指针在swap空间保存a和b的地址
 //{
 //	int temp = 0;
-//	temp = *x;
-//	//*x等同于a，通过解应用操作符，解出a保存的值并保存到temp中
-//	*x = *y;//*y等同于b
+//	temp = *x;	//*x等同于a，通过解应用操作符，解出a保存的值并保存到temp中
+//	*x = *y;	//*y等同于b
 //	*y =temp;
 //}
 //int main()
@@ -63,7 +62,7 @@
 /*
 //1.写一个函数可以判断一个数是不是素数
 #include "math.h"
-int prime(int a)//符合返回1，不符合返回0
+int prime(int a)	//符合返回1，不符合返回0
 {
 	int j = 0;
 	for(j=2;j<=sqrt(a);j++)
@@ -89,7 +88,7 @@ int main()
 
 /*
 //2.写一个函数判断一年是不是闺年
-int year(int x)//符合返回1，不符合返回0
+int year(int x)		//符合返回1，不符合返回0
 {
 	if((x%4 == 0 && x%100 != 0) || (x%400 == 0))
 		return 1;
@@ -114,7 +113,7 @@ int main()
 /*
 //3.写一个函数,实现一个整形有序数组的二分查找
 //不能写成binary_search(int arr[],int f)
-//因为计算机为了不浪费空间，传到函数的实质上自身arr[]的首地址，只有一个
+//因为计算机为了不浪费空间，传到函数的实质上是自身arr[]的首地址，只有一个传到函数
 int binary_search(int arr[],int f,int sz)
 {
 	
@@ -203,7 +202,7 @@ int main()
 	//拓展
 	printf("%d",printf("%d",printf("%d",50)));//结果5021
 /*流程
-    第一步.打印50。
+    	第一步.打印50。
 	注：因为50占两个字符，故printf("%d",50)返回2	
 	printf("%d",printf("%d",2))
 	第二步.打印502.
