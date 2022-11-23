@@ -1,0 +1,79 @@
+#include "stdio.h"
+/*创建工程的练习
+//头文件定义
+#ifndef __ADD_H__
+#define __ADD_H__
+int  Add(int x ,int y);
+#endif
+//头文件.c文件
+int  Add(int x ,int y)
+{
+	return x+y;
+}
+//#include "Add.h"
+/*
+int main()
+{
+	while(1)
+	{
+	int a = 0,b = 0;
+	int sum = 0;
+	printf("请输入两个数:");
+	scanf("%d%d",&a,&b);
+	sum = Add(a,b);
+	printf("%d\n",sum);
+	}
+	
+	return 0;
+}*/
+*/
+
+//递归练习
+/*
+//1.显示一串数字，如输入123 ，输出：1 2 3
+void print(int n)
+{
+	if (n>9)//停止递归的条件
+	{
+		print(n/10);
+	}
+	printf("%d ",n%10);
+}
+int main()//如输入567，输出5 6 7 
+{
+	unsigned int num = 0;
+	scanf("%d",&num);
+	print(num);
+	return 0;
+}*/
+
+
+//2.编写函数不允许创建临时变量,求字符串的长度。
+//临时变量的方法
+#include "string.h"
+//int set_strlen(char* str)
+//{
+//	int count = 0;
+//	while(*str != '\0' )
+//	{
+//		count++;
+//		str++;
+//	}
+//	return count;	
+//} 
+//递归的方法
+int set_strlen(char* str)
+{
+	if(*str != '\0' )
+		return 1+set_strlen(str+1);
+	else
+	return 0; 
+	
+	}
+int main()
+{
+	char arr[] = "long";
+	int sl = set_strlen(arr);
+	printf("长度为：%d",sl);
+	return 0;
+}
